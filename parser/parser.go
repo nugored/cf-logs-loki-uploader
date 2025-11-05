@@ -12,10 +12,9 @@ import (
 	"strings"
 	"time"
 
+	"github.com/aws/aws-sdk-go-v2/service/s3"
 	"github.com/nugored/cf-logs-loki-uploader/loki"
 	"github.com/nugored/cf-logs-loki-uploader/models"
-
-	"github.com/aws/aws-sdk-go-v2/service/s3"
 )
 
 type Parser struct {
@@ -116,7 +115,6 @@ func (s *Parser) parseFile(ctx context.Context, fn string) error {
 	labels := map[string]string{
 		"namespace":  namespace,
 		"cloudfront": cloudfrontObjectName,
-		"stream":     "cloudfront",
 	}
 
 	labels["cluster"] = s.opts.ClusterName
