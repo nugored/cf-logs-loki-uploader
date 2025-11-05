@@ -61,7 +61,7 @@ func (s *Parser) Stop() {
 func (s *Parser) Scan() error {
 	num := 0
 	ctx := context.Background()
-	maxKeys := int32(100) //no pager, tune interval to have less files per run
+	maxKeys := int32(1000) //no pager, tune interval to have less files per run
 	output, err := s.s3Client.ListObjectsV2(ctx, &s3.ListObjectsV2Input{
 		Bucket:  &s.opts.BucketName,
 		MaxKeys: &maxKeys,
