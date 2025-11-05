@@ -6,5 +6,5 @@ COPY . .
 RUN make build
 
 FROM gcr.io/distroless/static-debian11:nonroot
-COPY --from=builder /app/cloudfront-logs-shipper /cloudfront-logs-shipper
+COPY --from=builder /app/cf-logs-loki-uploader /cloudfront-logs-shipper
 ENTRYPOINT ["/cloudfront-logs-shipper"]

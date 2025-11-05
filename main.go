@@ -1,8 +1,6 @@
 package main
 
 import (
-	"cfuploader/models"
-	"cfuploader/parser"
 	"context"
 	"fmt"
 	"log/slog"
@@ -16,6 +14,8 @@ import (
 
 	"github.com/aws/aws-sdk-go-v2/config"
 	"github.com/aws/aws-sdk-go-v2/service/s3"
+	"github.com/nugored/cf-logs-loki-uploader/models"
+	"github.com/nugored/cf-logs-loki-uploader/parser"
 	"github.com/spf13/pflag"
 
 	"github.com/prometheus/common/version"

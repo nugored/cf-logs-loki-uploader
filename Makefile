@@ -22,5 +22,5 @@ docker: ## Build docker image
 	@docker build --platform linux/amd64 -t cloudfront-logs-shipper .
 
 push: ## Push docker image
-	docker tag cloudfront-logs-shipper sepa/cloudfront-logs-shipper
-	docker push sepa/cloudfront-logs-shipper
+	docker tag cloudfront-logs-shipper santadepapaya/cloudfront-logs-shipper
+	docker push santadepapaya/cloudfront-logs-shipper

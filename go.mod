@@ -1,4 +1,4 @@
-module cfuploader
+module github.com/nugored/cf-logs-loki-uploader
 
 go 1.24.1
 

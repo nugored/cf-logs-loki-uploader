@@ -2,8 +2,6 @@ package parser
 
 import (
 	"bufio"
-	"cfuploader/loki"
-	"cfuploader/models"
 	"compress/gzip"
 	"context"
 	"encoding/json"
@@ -13,6 +11,9 @@ import (
 	"net/http"
 	"strings"
 	"time"
+
+	"github.com/nugored/cf-logs-loki-uploader/loki"
+	"github.com/nugored/cf-logs-loki-uploader/models"
 
 	"github.com/aws/aws-sdk-go-v2/service/s3"
 )

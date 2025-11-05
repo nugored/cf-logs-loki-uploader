@@ -3,7 +3,6 @@ package loki
 import (
 	"bufio"
 	"bytes"
-	"cfuploader/models"
 	"context"
 	"fmt"
 	"io"
@@ -14,6 +13,7 @@ import (
 	"time"
 
 	"github.com/gogo/protobuf/proto"
+	"github.com/nugored/cf-logs-loki-uploader/models"
 
 	"github.com/golang/snappy"
 	"github.com/grafana/dskit/backoff"
