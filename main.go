@@ -50,6 +50,11 @@ func main() {
 		os.Exit(1)
 	}
 
+	if opts.ClusterName == "" {
+		logger.Error("--cluster is required")
+		os.Exit(1)
+	}
+
 	if opts.LokiURL == "" {
 		logger.Error("--loki-url is required")
 		os.Exit(1)
