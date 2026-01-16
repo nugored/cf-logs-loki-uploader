@@ -72,7 +72,7 @@ func (s *Parser) Scan() error {
 
 	start := time.Now()
 	for _, obj := range output.Contents {
-		if obj.Key == nil || s.stop {
+		if obj.Key == nil || obj.Size!=0 || s.stop {
 			continue
 		}
 		s.queue <- obj.Key
